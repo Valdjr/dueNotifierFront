@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      baseUrl: "http://localhost:5000",
+      baseUrl: "https://duenotifier.herokuapp.com",
       products: []
     };
   }

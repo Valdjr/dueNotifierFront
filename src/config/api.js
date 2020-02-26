@@ -1,6 +1,6 @@
 const axios = require("axios").default;
 const instance = axios.create({
-  baseURL: "http://localhost:5000"
+  baseURL: "https://duenotifier.herokuapp.com"
 });
 
 export default instance;
