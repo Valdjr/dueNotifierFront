@@ -3,13 +3,15 @@ import "./App.css";
 import api from "./config/api";
 import ProductList from "./Component/ProductList";
 import Filter from "./Component/Filter";
+import Modal from "./Component/Modal";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       baseUrl: "https://duenotifier.herokuapp.com",
-      products: []
+      products: [],
+      editProduct: false
     };
   }
 
@@ -51,11 +53,50 @@ class App extends React.Component {
     this.listProducts();
   };
 
+  edit = async id => {
+    const { data } = await api.get(`/product/${id}`);
+    this.setState({ editProduct: data });
+  };
+
+  handleClose = () => {
+    this.setState({ editProduct: false });
+  };
+
+  handleEdit = async (name, due, id) => {
+    await api
+      .put(`/product/${id}`, {
+        name,
+        due
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+    this.listProducts();
+  };
+
   render() {
     return (
       <div className="App">
-        <Filter filter={this.handleFilter} add={this.handleAdd} />
-        <ProductList products={this.state.products} remove={this.remove} />
+        <Filter
+          filter={this.handleFilter}
+          add={this.handleAdd}
+          edit={this.state.editProduct}
+        />
+        <ProductList
+          products={this.state.products}
+          remove={this.remove}
+          edit={this.edit}
+        />
+        {this.state.editProduct !== false ? (
+          <Modal
+            show={"auto"}
+            close={this.handleClose}
+            add={this.handleEdit}
+            product={this.state.editProduct}
+          />
+        ) : (
+          ""
+        )}
       </div>
     );
   }

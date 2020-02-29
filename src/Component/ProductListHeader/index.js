@@ -5,8 +5,9 @@ import { Header } from "./style.js";
 export default function ProductListHeader() {
   return (
     <Header>
-      Produto
-      <span>Vencimento</span>
+      <td>Produto</td>
+      <td>Vencimento</td>
+      <td></td>
     </Header>
   );
 }

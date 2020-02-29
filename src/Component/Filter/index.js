@@ -37,29 +37,31 @@ export default class Filter extends React.Component {
 
   render() {
     return (
-      <Container onSubmit={e => e.preventDefault()}>
-        <input
-          type="text"
-          placeholder="Digite o nome do produto"
-          onChange={this.handleName}
-        />
-        <input type="date" onChange={this.handleDue} />
-        <button title="Pesquisar" onClick={this.handleSearch}>
-          <FaSearch color="#FFF" />
-        </button>
-        <button
-          type="button"
-          title="Adicionar produto"
-          onClick={this.handleAdd}
-        >
-          <FaPlus color="#FFF" />
-        </button>
+      <>
+        <Container onSubmit={e => e.preventDefault()}>
+          <input
+            type="text"
+            placeholder="Digite o nome do produto"
+            onChange={this.handleName}
+          />
+          <input type="date" onChange={this.handleDue} />
+          <button title="Pesquisar" onClick={this.handleSearch}>
+            <FaSearch color="#FFF" />
+          </button>
+          <button
+            type="button"
+            title="Adicionar produto"
+            onClick={this.handleAdd}
+          >
+            <FaPlus color="#FFF" />
+          </button>
+        </Container>
         <Modal
           show={this.state.show}
           close={this.handleClose}
           add={this.props.add}
         />
-      </Container>
+      </>
     );
   }
 }

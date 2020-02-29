@@ -31,5 +31,9 @@ export const Container = styled.form`
     border-radius: 4px;
     cursor: pointer;
     margin-left: 10px;
+
+    &:hover {
+      background: #9f4aec;
+    }
   }
 `;

@@ -29,16 +29,23 @@ export const ModalContent = styled.form`
 
   input[type="text"] {
     width: 90%;
+    padding: 10px;
   }
 
   input[type="date"] {
     width: 91%;
+    padding: 7.5px;
   }
 
   button {
     margin: 10px 40%;
     max-width: 200px;
     color: #fff;
+    background: blueviolet;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
   }
 `;
 

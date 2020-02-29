@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-export const Header = styled.div`
-  padding: 20px 20px 0 20px;
+export const Header = styled.tr`
   font-weight: bold;
 
-  span {
-    float: right;
+  td {
+    padding: 20px;
   }
 `;

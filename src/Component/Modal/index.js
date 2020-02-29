@@ -6,9 +6,17 @@ export class Modal extends Component {
   constructor() {
     super();
     this.state = {
+      id: 0,
       name: "",
       due: ""
     };
+  }
+
+  componentDidMount() {
+    if (this.props.product) {
+      const { _id, name, due } = this.props.product;
+      this.setState({ id: _id, name, due: due.slice(0, 10) });
+    }
   }
 
   handleName = e => {
@@ -21,8 +29,8 @@ export class Modal extends Component {
 
   handleSave = e => {
     e.preventDefault();
-    const { name, due } = this.state;
-    this.props.add(name, due);
+    const { name, due, id } = this.state;
+    this.props.add(name, due, id);
     this.props.close();
   };
 
@@ -36,8 +44,9 @@ export class Modal extends Component {
             type="text"
             placeholder="Digite o nome do produto"
             onChange={this.handleName}
+            value={this.state.name}
           />
-          <input type="date" onChange={this.handleDue} />
+          <input type="date" onChange={this.handleDue} value={this.state.due} />
           <button>Salvar</button>
         </ModalContent>
       </Container>

@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-export const List = styled.ul`
-  list-style: none;
+export const List = styled.table`
   background-color: #fff;
-  max-width: 500px;
+  max-width: 540px;
   margin: auto;
   border-radius: 5px;
-  padding: 1px 20px;
+  padding: 20px;
 `;

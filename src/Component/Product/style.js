@@ -1,18 +1,26 @@
 import styled from "styled-components";
 
-export const Item = styled.li`
-  border: 1px solid #ddd;
-  background-color: #eee;
-  border-radius: 5px;
-  padding: 20px 20px;
-  margin: 20px 0;
+export const Tr = styled.tr`
+  &:hover {
+    background: #ddd;
+  }
 
-  span {
-    float: right;
+  td {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+`;
 
-    span {
-      cursor: pointer;
-      color: blueviolet;
-    }
+export const Td = styled.td`
+  cursor: pointer;
+`;
+
+export const Delete = styled.span`
+  cursor: pointer;
+  color: blueviolet;
+
+  &:hover {
+    color: #9f4aec;
   }
 `;
