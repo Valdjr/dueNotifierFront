@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      baseUrl: "",
+      baseUrl: "https://duenotifier.herokuapp.com",
       products: [],
       editProduct: false
     };
