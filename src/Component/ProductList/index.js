@@ -8,7 +8,7 @@ import { List } from "./style";
 export default function ProductList({ products, remove, edit }) {
   return (
     <List>
-      <ProductListHeader />
+      {products.length > 0 ? <ProductListHeader /> : ""}
       {products.length > 0 ? (
         products.map(product => (
           <Product
@@ -21,6 +21,8 @@ export default function ProductList({ products, remove, edit }) {
       ) : (
         <div style={{ margin: "20px", textAlign: "center" }}>
           Nenhum produto foi encontrado.
+          <strong> Refaça sua busca</strong> ou
+          <strong> insira um novo produto</strong>.
         </div>
       )}
     </List>
