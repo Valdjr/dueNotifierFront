@@ -38,7 +38,7 @@ export const ModalContent = styled.form`
   }
 
   button {
-    margin: 10px 40%;
+    margin: 5px 40%;
     max-width: 200px;
     color: #fff;
     background: blueviolet;
@@ -61,4 +61,10 @@ export const Close = styled.div`
     text-decoration: none;
     cursor: pointer;
   }
+`;
+
+export const Tr = styled.div`
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin: 15px 0;
 `;
