@@ -4,6 +4,8 @@ import api from "./config/api";
 import ProductList from "./Component/ProductList";
 import Filter from "./Component/Filter";
 import Modal from "./Component/Modal";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 class App extends React.Component {
   constructor() {
@@ -97,6 +99,7 @@ class App extends React.Component {
         ) : (
           ""
         )}
+        <ToastContainer />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { toast } from "react-toastify";
 
 import { Container, ModalContent, Close } from "./style.js";
 
@@ -30,8 +31,12 @@ export class Modal extends Component {
   handleSave = e => {
     e.preventDefault();
     const { name, due, id } = this.state;
-    this.props.add(name, due, id);
-    this.props.close();
+    if (!name || !due) {
+      toast.warn("Preencha as informações.");
+    } else {
+      this.props.add(name, due, id);
+      this.props.close();
+    }
   };
 
   render() {
