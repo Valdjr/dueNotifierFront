@@ -99,7 +99,10 @@ class App extends React.Component {
         ) : (
           ""
         )}
-        <ToastContainer />
+        <ToastContainer
+          className="toast-container"
+          toastClassName="dark-toast"
+        />
       </div>
     );
   }

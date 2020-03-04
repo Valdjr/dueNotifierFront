@@ -1,0 +1,10 @@
+.toast-content {
+	background: #fff !important;
+    color: #333 !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+}
+
+.toast-progress-bar {
+    background: blueviolet !important;
+}

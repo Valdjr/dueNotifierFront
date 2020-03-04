@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { toast } from "react-toastify";
+import "./toast.css";
 
 import { Container, ModalContent, Close } from "./style.js";
 
@@ -32,7 +33,11 @@ export class Modal extends Component {
     e.preventDefault();
     const { name, due, id } = this.state;
     if (!name || !due) {
-      toast.warn("Preencha as informações.");
+      // toast.warn("Preencha as informações.");
+      toast("Preencha as informações.", {
+        className: "toast-content",
+        progressClassName: "toast-progress-bar"
+      });
     } else {
       this.props.add(name, due, id);
       this.props.close();
