@@ -46,6 +46,10 @@ export const ModalContent = styled.form`
     padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
+
+    &:hover {
+      background: #9f4aec;
+    }
   }
 `;
 
