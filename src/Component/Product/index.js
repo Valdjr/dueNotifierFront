@@ -25,18 +25,4 @@ export default function Product({ product, remove, edit }) {
       </td>
     </Tr>
   );
-  // return (
-  //   <Item>
-  //     <div onClick={() => edit(product._id)}>{product.name}</div>
-  //     <span>{format(new Date(product.due), "d/MM/yyyy")}&nbsp;</span>
-  //     <Delete
-  //       onClick={() => {
-  //         if (window.confirm("Are you sure you wish to delete this item?"))
-  //           remove(product._id);
-  //       }}
-  //     >
-  //       <FaTrashAlt />
-  //     </Delete>
-  //   </Item>
-  // );
 }
