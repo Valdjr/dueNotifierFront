@@ -33,7 +33,6 @@ export class Modal extends Component {
     e.preventDefault();
     const { name, due, id } = this.state;
     if (!name || !due) {
-      // toast.warn("Preencha as informações.");
       toast("Preencha as informações necessárias.", {
         className: "toast-content",
         progressClassName: "toast-progress-bar"
