@@ -66,9 +66,3 @@ export const Close = styled.div`
     cursor: pointer;
   }
 `;
-
-export const Tr = styled.div`
-  width: 100%;
-  border-bottom: 1px solid #ccc;
-  margin: 15px 0;
-`;

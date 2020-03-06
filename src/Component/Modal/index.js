@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { toast } from "react-toastify";
 import "./toast.css";
 
-import { Container, ModalContent, Close, Tr } from "./style.js";
+import { Container, ModalContent, Close } from "./style.js";
 
 export class Modal extends Component {
   constructor() {
@@ -49,7 +49,6 @@ export class Modal extends Component {
         <ModalContent onSubmit={this.handleSave}>
           <strong style={{ verticalAlign: "sub" }}>Novo produto</strong>
           <Close onClick={this.props.close}>&times;</Close>
-          <Tr />
           <input
             type="text"
             placeholder="Digite o nome do produto"
@@ -57,7 +56,6 @@ export class Modal extends Component {
             value={this.state.name}
           />
           <input type="date" onChange={this.handleDue} value={this.state.due} />
-          <Tr />
           <button>Salvar</button>
         </ModalContent>
       </Container>
