@@ -8,6 +8,7 @@ export const Container = styled.form`
   border-radius: 5px;
   display: flex;
   align-items: center;
+  box-shadow: 0px 3px 6px #0000001f;
 
   input {
     width: 100%;

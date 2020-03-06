@@ -6,4 +6,5 @@ export const List = styled.table`
   margin: auto;
   border-radius: 5px;
   padding: 20px;
+  box-shadow: 0px 3px 6px #0000001f;
 `;
