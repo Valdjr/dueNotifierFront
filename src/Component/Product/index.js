@@ -10,9 +10,9 @@ export default function Product({ product, remove, edit }) {
       <Td style={{ width: "80%" }} onClick={() => edit(product._id)}>
         {product.name}
       </Td>
-      <Td style={{ width: "10%" }} onClick={() => edit(product._id)}>
+      <td style={{ width: "10%" }} onClick={() => edit(product._id)}>
         {format(new Date(product.due), "d/MM/yyyy")}
-      </Td>
+      </td>
       <td style={{ width: "10%" }}>
         <Delete
           onClick={() => {
