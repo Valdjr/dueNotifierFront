@@ -4,6 +4,7 @@ import api from "./config/api";
 import ProductList from "./Component/ProductList";
 import Filter from "./Component/Filter";
 import Modal from "./Component/Modal";
+import Footer from "./Component/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -89,6 +90,7 @@ class App extends React.Component {
           remove={this.remove}
           edit={this.edit}
         />
+        <Footer />
         {this.state.editProduct !== false ? (
           <Modal
             show={"auto"}
